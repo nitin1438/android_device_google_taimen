@@ -51,3 +51,13 @@ BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=12
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_taimen_defconfig
+
+# Board uses A/B OTA.
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vbmeta \
+    dtbo \
+    vendor
