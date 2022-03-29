@@ -13,23 +13,39 @@
 # limitations under the License.
 
 # Inherit some common Project arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
-
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, vendor/pixeldust/build/product/pixeldust_product.mk)
 
 # Inherit AOSP device configuration for Taimen
 $(call inherit-product, device/google/taimen/aosp_taimen.mk)
 
+#
+# All components inherited here go to system_ext image
+#
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+
+#
+# All components inherited here go to vendor image
+#
+# TODO(b/136525499): move *_vendor.mk into the vendor makefile later
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
+
+# Release name
+export TARGET_DEVICE=taimen
+
+# Bootanimation
+BOOTANIMATION := 1440
+
+# Build with gapps
+#WITH_GMS := true
+
 # Override AOSP build properties
-PRODUCT_NAME := arrow_taimen
+PRODUCT_NAME := pixeldust_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 2 XL
 PRODUCT_RESTRICT_VENDOR_FILES := false
-
-DEVICE_MAINTAINER := ReallySnow
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="taimen" \
@@ -40,4 +56,6 @@ BUILD_FINGERPRINT := "google/taimen/taimen:11/RP1A.201005.004.A1/6934943:user/re
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/taimen/taimen:11/RP1A.201005.004.A1/6934943:user/release-keys
 
+# Inherit product specific makefiles
+$(call inherit-product, device/google/taimen/device.mk)
 $(call inherit-product, vendor/google/taimen/taimen-vendor.mk)
