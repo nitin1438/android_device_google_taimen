@@ -65,6 +65,11 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
         done
         ;;
+    # Use VNDK 32 libhidlbase
+    vendor/lib64/com.quicinc.cne.api@1.0.so)
+        "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+        sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+    ;;
     esac
 }
 
