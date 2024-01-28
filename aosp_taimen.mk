@@ -22,16 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product-if-exists, vendor/firmware/build/core/config.mk)
 
 # Inherit some common BananaDroid stuff
-$(call inherit-product, vendor/banana/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Supported Device Flags. (Features)
-BANANA_BUILD_TYPE := OFFICIAL
-BANANA_MAINTAINER := @asriadirahim
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_EXCLUDE_MATLOG := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
-WITH_GAPPS := true
+
+# Build with gapps
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/taimen/device.mk)
@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := banana_taimen
+PRODUCT_NAME := aosp_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
 

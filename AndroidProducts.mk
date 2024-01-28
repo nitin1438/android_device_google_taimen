@@ -15,10 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/banana_taimen.mk \
+    $(LOCAL_DIR)/aosp_taimen.mk \
     $(LOCAL_DIR)/aosp_taimen_hwasan.mk \
 
 COMMON_LUNCH_CHOICES := \
-    banana_taimen-userdebug \
-    banana_taimen-user \
-    banana_taimen-eng
+    aosp_taimen-userdebug \
+    aosp_taimen-user \
+    aosp_taimen-eng
