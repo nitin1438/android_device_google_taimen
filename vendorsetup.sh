@@ -2,6 +2,7 @@ echo 'Starting to clone stuffs needed for your device'
 
 # Remove Stuff
 rm -rf kernel/google/wahoo
+rm -rf devices/google/gs-common
 rm -rf device/google/wahoo
 rm -rf vendor/google/taimen
 rm -rf hardware/qcom/audio
@@ -28,6 +29,9 @@ git clone --depth=1 https://github.com/LineageOS/android_hardware_qcom_data_ipac
 git clone --depth=1 https://github.com/LineageOS/android_hardware_qcom_media.git -b lineage-21.0 hardware/qcom/media
 git clone --depth=1 https://github.com/LineageOS/android_hardware_qcom_wlan.git -b lineage-21.0 hardware/qcom/wlan
 git clone --depth=1 https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-21.0 hardware/lineage/compat
+
+# Common
+git clone --depth=1 https://github.com/LineageOS/android_device_google_gs-common.git -b lineage-21.0 devices/google/gs-common
 
 # Gcam Mod Prebuilts
 git clone --depth=1 https://gitlab.com/asriadirahim/google_camera.git -b thirteen packages/apps/GoogleCamera

@@ -25,10 +25,8 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 ELIXIR_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
-PRODUCT_USES_FULL_GAPPS := true
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-EXCLUDE_LAWNCHAIR := true
 
 # Inherit device configuration
 $(call inherit-product, device/google/taimen/device.mk)

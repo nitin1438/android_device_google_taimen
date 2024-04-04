@@ -1,4 +1,5 @@
 kernel/google/wahoo
+devices/google/gs-common
 device/google/wahoo
 vendor/google/taimen
 hardware/qcom/audio
