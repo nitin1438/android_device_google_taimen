@@ -10,4 +10,3 @@ hardware/qcom/media
 hardware/qcom/wlan
 hardware/lineage/compat
 packages/apps/GoogleCamera
-vendor/firmware

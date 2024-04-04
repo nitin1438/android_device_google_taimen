@@ -13,7 +13,6 @@ rm -rf hardware/qcom/media
 rm -rf hardware/qcom/wlan
 rm -rf hardware/lineage/compat
 rm -rf packages/apps/GoogleCamera
-rm -rf vendor/firmware
 
 # Tree Dependencies
 git clone --depth=1 https://github.com/ProjectElixir-Devices/device_google_wahoo.git -b udc device/google/wahoo
@@ -32,8 +31,5 @@ git clone --depth=1 https://github.com/LineageOS/android_hardware_lineage_compat
 
 # Gcam Mod Prebuilts
 git clone --depth=1 https://gitlab.com/asriadirahim/google_camera.git -b thirteen packages/apps/GoogleCamera
-
-# Vendor Firmware
-git clone --depth=1 https://gitlab.com/asriadirahim/vendor_firmware.git -b udc vendor/firmware
 
 echo 'Completed!'
