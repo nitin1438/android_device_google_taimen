@@ -224,13 +224,13 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so|2375e0a0e35d35bd32de549a8fdf057
 system_ext/lib64/vendor.qti.ims.rcssip@1.0.so|7815eb62283225478f7b6d405e5b4465eef27d54
 system_ext/lib64/vendor.qti.ims.rcsuce@1.0.so|ccc82a98febbd43a10a2308045b16f1cbb39ed81
 
-# Radio - IMS - from LA.UM.9.6.3.r1-06200-89xx.0
--system_ext/lib64/lib-imscamera.so|0688c8e66ad376dd528fbbc0038529c26fdb38ea
--system_ext/lib64/lib-imsvt.so|0b2065c9b500a11d39aa49f32dd06267e083fabb
--system_ext/lib64/lib-imsvtextutils.so|1acf1de305e455a3a924483e5652b37133d10fd1
--system_ext/lib64/libimsmedia_jni.so|9351850c0b1499e1539303b8b177456a6ab83fd9
--system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_system_ext|4cf9e97f526c6278c5e2136e00d1fb800fb941aa
-system_ext/priv-app/ims/ims.apk|d4d9a0e9aa59a94d0eeb70a2d448107031015018
+# Radio - IMS VT - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys 
+system_ext/lib64/lib-imscamera.so|8170256dbf9120ff05f193ba937c718d9c580881
+system_ext/lib64/lib-imsvt.so|4f96cc5f27551d0b6cb11ad6447d9ce8829dde47
+system_ext/lib64/lib-imsvtextutils.so|1acf1de305e455a3a924483e5652b37133d10fd1
+system_ext/lib64/libimsmedia_jni.so|b90664b4ce069358f36801da5ceac10baf4ebcc6
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|4cf9e97f526c6278c5e2136e00d1fb800fb941aa
+system_ext/priv-app/ims/ims.apk|16b82e1e0113beb7fb3a62a9a5513b317675d96e
 
 # Radio - IMS - from Redmi/sweet_global/sweet:12/SKQ1.210908.001/V13.0.3.0.SKFMIXM:user/release-keys
 -system_ext/lib64/lib-imsvideocodec.so|b7001bb1008106ccb9ef92dd2560e2052b40c325
