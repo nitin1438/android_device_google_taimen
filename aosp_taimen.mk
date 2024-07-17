@@ -19,11 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common EvolutionX stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# EvolutionX Specific Flags
-EVO_BUILD_TYPE := Official
-WITH_GMS := true
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # EPPE
 TARGET_DISABLE_EPPE := true
@@ -47,7 +43,7 @@ PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := lineage_taimen
+PRODUCT_NAME := aosp_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
 
