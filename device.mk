@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
     device/google/taimen/init.taimen.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_HARDWARE).usb.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560 \
+    ro.sf.lcd_density=560
 
 # Kernel Modules Config
 PRODUCT_COPY_FILES += \
@@ -47,7 +47,6 @@ PRODUCT_COPY_FILES += \
 # Logging
 PRODUCT_COPY_FILES += \
     device/google/taimen/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_HARDWARE).logging.rc
-
 
 PRODUCT_COPY_FILES += \
     device/google/taimen/nfc/libnfc-nxp.taimen.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
@@ -123,7 +122,7 @@ PRODUCT_COPY_FILES += \
 # Enable modem logging
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.modem.diag.qdb=0\
+    persist.sys.modem.diag.qdb=0 \
     persist.sys.modem.diag.mdlog=true \
     persist.sys.modem.diag.mdlog_br_num=5 \
     ro.radio.log_loc="/data/vendor/modem_dump" \
@@ -132,13 +131,13 @@ endif
 
 #IMU calibration
 PRODUCT_PROPERTY_OVERRIDES += \
-  persist.config.calibration_fac=/persist/sensors/calibration/calibration.xml
+    persist.config.calibration_fac=/persist/sensors/calibration/calibration.xml
 
 # Vibrator HAL
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.vibrator.hal.click.duration=10 \
-  ro.vibrator.hal.tick.duration=4 \
-  ro.vibrator.hal.heavyclick.duration=12
+    ro.vibrator.hal.click.duration=10 \
+    ro.vibrator.hal.tick.duration=4 \
+    ro.vibrator.hal.heavyclick.duration=12
 
 # VNDK
 PRODUCT_COPY_FILES += \
