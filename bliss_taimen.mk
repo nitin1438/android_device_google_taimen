@@ -19,13 +19,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common PixelOS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1440
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_CALL_RECORDING_SUPPORTED := true
 TARGET_DISABLE_EPPE := true
-TARGET_DOES_NOT_SUPPORT_GOOGLE_BATTERY := false
-TARGET_INCLUDE_STOCK_ARCORE := true
+
+# Gapps
+TARGET_STOCK_GAPPS := true
 
 # Inherit device configuration
 $(call inherit-product, device/google/taimen/device.mk)
@@ -42,7 +46,7 @@ PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_taimen
+PRODUCT_NAME := bliss_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
 

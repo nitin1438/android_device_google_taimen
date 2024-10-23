@@ -15,10 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_taimen.mk \
+    $(LOCAL_DIR)/bliss_taimen.mk \
     $(LOCAL_DIR)/aosp_taimen_hwasan.mk \
 
 COMMON_LUNCH_CHOICES := \
-    aosp_taimen-userdebug \
-    aosp_taimen-user \
-    aosp_taimen-eng
+    bliss_taimen-userdebug \
+    bliss_taimen-user \
+    bliss_taimen-eng
