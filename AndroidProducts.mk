@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_taimen.mk \
+    $(LOCAL_DIR)/bliss_taimen.mk \
     $(LOCAL_DIR)/aosp_taimen_hwasan.mk
