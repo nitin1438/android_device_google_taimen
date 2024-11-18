@@ -44,6 +44,7 @@ PRODUCT_BRAND := google
 PRODUCT_NAME := bliss_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
+BLISS_BUILDTYPE := OFFICIAL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="taimen-user 11 RP1A.201005.004.A1 6934943 release-keys" \
