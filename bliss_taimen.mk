@@ -28,8 +28,7 @@ WITH_GMS := false
 TARGET_DISABLE_EPPE := true
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2880
-TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
 # Inherit device configuration
 $(call inherit-product, device/google/taimen/device.mk)
