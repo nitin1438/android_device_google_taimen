@@ -1,6 +1,5 @@
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2880
-TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
@@ -19,6 +18,7 @@ PRODUCT_MANUFACTURER := Google
 PRODUCT_MODEL := Pixel 2 XL
 PRODUCT_NAME := lineage_taimen
 PRODUCT_RESTRICT_VENDOR_FILES := false
+BLISS_BUILDTYPE := OFFICIAL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="taimen-user 11 RP1A.201005.004.A1 6934943 release-keys" \
